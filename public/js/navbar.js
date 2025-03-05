@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.querySelector("button[aria-label='Toggle menu']");
+    const toggleButton = document.querySelector(
+        "button[aria-label='Toggle menu']",
+    );
     const navMenu = document.querySelector("nav[aria-label='Global']");
 
     if (toggleButton && navMenu) {

@@ -1,10 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector("button[aria-label='Toggle menu']");
-    const navMenu = document.querySelector("nav[aria-label='Global']");
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    let menu = document.getElementById('mobile-menu');
+    // console.log(document.getElementById('mobile-menu'))
+    menu.classList.toggle('hidden');
+});
 
-    if (menuButton && navMenu) {
-        menuButton.addEventListener("click", function () {
-            navMenu.classList.toggle("hidden"); // Toggle class 'hidden' untuk menampilkan/menyembunyikan menu
-        });
-    }
+document.getElementById('profile-toggle').addEventListener('click', function () {
+    let menu = document.getElementById('profile-menu');
+    // console.log(document.getElementById("profile-menu"))
+    menu.classList.toggle('hidden');
 });

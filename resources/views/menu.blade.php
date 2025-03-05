@@ -1,53 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.app-menu')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
+@section('title', 'Home')
 
-<body>
-    <header>
-        @include('layout.navbar')
-    </header>
+@section('content')
 
-    <main>
-        <section class="bg-gray-900 text-white">
-            <div class="mx-auto max-w-screen-md px-4 py-32 lg:flex lg:h-screen lg:items-center">
-                <div class="mx-auto max-w-3xl text-center">
-                    <h1
-                        class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl uppercase">
-                        Ramadhan
-                        <span class="sm:block"> SMK Kesehatan Cianjur </span>
-                    </h1>
+<section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('/img/bg/bg-ramadhan.png');">
+    <div
+        class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 sm:bg-gradient-to-r">
+    </div>
 
-                    <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
-                        Raihlah berkah ramadhan bersama SMK Kesehatan Cianjur.
-                    </p>
+    <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+        <div class="max-w-xl text-center sm:text-left">
+            <h1 class="text-3xl font-extrabold text-white sm:text-5xl">
+                Ramadhan bersama
 
-                    {{-- <div class="mt-8 flex flex-wrap justify-center gap-4">
-                        <a class="block w-full rounded-sm border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:ring-3 focus:outline-hidden sm:w-auto"
-                            href="#">
-                            Official Website
-                        </a>
+                <strong class="block font-extrabold text-rose-500"> SMK Kesehatan Cianjur </strong>
+            </h1>
 
-                        <a class="block w-full rounded-sm border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:ring-3 focus:outline-hidden sm:w-auto"
-                            href="#">
-                            Pendaftaran
-                        </a>
-                    </div> --}}
-                </div>
+            <p class="mt-4 max-w-lg text-white sm:text-xl/relaxed">
+                Marhaban ya Ramadan! Saatnya membersihkan hati, memperbanyak ibadah, dan mendekatkan diri kepada
+                Allah.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4 text-center">
+                <a href="/home"
+                    class="block w-full rounded-sm bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto">
+                    Login
+                </a>
+
+                <a href="/register"
+                    class="block w-full rounded-sm bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow-sm hover:text-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto">
+                    Register
+                </a>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        @include('layout.footer')
-    </footer>
-<script src="/js/navbar.js"></script>
-</body>
-
-</html>
+@endsection
