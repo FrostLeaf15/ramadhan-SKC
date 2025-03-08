@@ -10,7 +10,7 @@
                 <ul class="flex items-center gap-6 text-xl">
                     <li>
                         <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                            href="#">
+                            href="/">
                             Home
                         </a>
                     </li>
@@ -44,11 +44,11 @@
                 <div id="mobile-menu"
                     class="hidden absolute z-40 top-16 left-0 w-full bg-white shadow-md dark:bg-gray-900 md:hidden transition-all duration-300">
                     <nav class="p-4 space-y-2">
-                        <a href="#"
+                        <a href="/home"
                             class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Home</a>
                         <a href="#"
                             class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">About</a>
-                        <a href="#"
+                        <a href="https://www.smkkesehatancianjur.sch.id/"
                             class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Official</a>
                     </nav>
                 </div>

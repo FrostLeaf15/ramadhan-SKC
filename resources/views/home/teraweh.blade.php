@@ -3,44 +3,51 @@
 @section('title', 'teraweh')
 
 @section('content')
-    <div class="container">
-        
-        <h2>Tambah Data Teraweh</h2>
+    <div class="judul">
+        <h1 class="text-center text-3xl font-bold text-gray-900 uppercase py-2">Teraweh</h1>
+    </div>
 
-        <form action="{{ route('teraweh.store') }}" method="POST">
-            @csrf
+    <div class="isi">
+        <div class="waktu text-center">
+            <div id="waktu"></div>
+        </div>
+        <div class="form min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+            <form action="{{ route('teraweh.store') }}" method="POST">
+                @csrf
 
-            <div class="mb-3">
-                <label>Nama User</label>
-                <input type="text" name="nama_user" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label>Nama User</label>
+                    <input type="text" name="nama_user" class="form-control blocks w-full rounded-xl mt-1" required>
+                </div>
 
-            <div class="mb-3">
-                <label>Kelas User</label>
-                <input type="text" name="kelas_user" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label>Kelas User</label>
+                    <input type="text" name="kelas_user" class="form-control blocks w-full rounded-xl mt-1" required>
+                </div>
 
-            <div class="mb-3">
-                <label>Jurusan User</label>
-                <input type="text" name="jurusan_user" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label>Jurusan User</label>
+                    <input type="text" name="jurusan_user" class="form-control blocks w-full rounded-xl mt-1" required>
+                </div>
 
-            <div class="mb-3">
-                <label>Tanggal Input</label>
-                <input type="date" name="tanggal_input" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label>Tanggal Input</label>
+                    <input type="date" name="tanggal_input" class="form-control blocks w-full rounded-xl mt-1" required>
+                </div>
 
-            <div class="mb-3">
-                <label>Status Teraweh</label>
-                <select name="status" class="form-control" required>
-                    <option value="saya teraweh">Saya Teraweh</option>
-                    <option value="saya berhalangan">Saya Berhalangan</option>
-                    <option value="saya sakit">Saya Sakit</option>
-                </select>
-            </div>
+                <div class="mb-3">
+                    <label>Status Teraweh</label>
+                    <select name="status" class="form-control blocks w-full rounded-xl mt-1" required>
+                        <option value="saya teraweh">Saya Teraweh</option>
+                        <option value="saya berhalangan">Saya Berhalangan</option>
+                        <option value="saya sakit">Saya Sakit</option>
+                    </select>
+                </div>
 
-            <button type="submit" class="btn btn-primary">Simpan</button>
-        </form>
+                <button type="submit"
+                class="btn btn-primary bg-green-400 px-6 py-3 rounded-xl mt-2 border border-black hover:bg-green-200 transition delay-100 duration-300 ease-in-out">Simpan</button>
+            </form>
+        </div>
     </div>
 
 @endsection

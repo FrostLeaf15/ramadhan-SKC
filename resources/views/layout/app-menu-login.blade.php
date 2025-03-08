@@ -24,7 +24,7 @@
         @include('layout.navbar-login')
     </header>
 
-    <main class="bg-stone-50">
+    <main class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         @yield('content')
     </main>
 

@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    {{-- <form method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- Name -->
@@ -48,5 +48,23 @@
                 {{ __('Register') }}
             </x-primary-button>
         </div>
+    </form> --}}
+
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+        <input type="text" name="name" placeholder="Nama Lengkap" required>
+        <input type="text" name="username" placeholder="Username" required minlength="5">
+        <input type="email" name="email" placeholder="Email (Opsional)">
+        <select name="role_id" class="form-control" required>
+            <option disabled hidden selected class="text-gray-500">-- Pilih Role --</option>
+            <option value="siswa">Siswa</option>
+            {{-- <option value="guru">Guru</option> --}}
+            {{-- <option value="admin">Admin</option> --}}
+        </select>
+        <input type="password" name="password" placeholder="Password" required minlength="8">
+        <input type="password" name="password_confirmation" placeholder="Konfirmasi Password" required>
+        <button type="submit">Daftar</button>
     </form>
+
+
 </x-guest-layout>

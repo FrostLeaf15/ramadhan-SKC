@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('username')->unique();
+            $table->string('email')->unique()->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->foreignId('role_id')->constrained('roles');
             $table->timestamps();
         });
-
+        
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
@@ -41,6 +41,12 @@ return new class extends Migration
             $table->string('name'); // siswa, guru, admin
             $table->timestamps();
         });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('username')->unique()->after('name');
+            $table->foreignId('role_id')->constrained('roles')->after('email');
+        });
+        
     }
 
     /**
