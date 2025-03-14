@@ -1,5 +1,5 @@
 <x-guest-layout>
-    {{-- <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- Name -->
@@ -9,11 +9,28 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- Username -->
+        <div class="mt-4">
+            <x-input-label for="username" :value="__('Username')" />
+            <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('username')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <div class="mt-4">
+            <x-input-label for="role" :value="__('Role')" />
+            <select id="role" name="role" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <option value="1">Siswa</option>
+                <option value="2">Guru</option>
+                <option value="3">Admin</option>
+            </select>
+            <x-input-error :messages="$errors->get('role')" class="mt-2" />
         </div>
 
         <!-- Password -->
@@ -48,23 +65,5 @@
                 {{ __('Register') }}
             </x-primary-button>
         </div>
-    </form> --}}
-
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
-        <input type="text" name="name" placeholder="Nama Lengkap" required>
-        <input type="text" name="username" placeholder="Username" required minlength="5">
-        <input type="email" name="email" placeholder="Email (Opsional)">
-        <select name="role_id" class="form-control" required>
-            <option disabled hidden selected class="text-gray-500">-- Pilih Role --</option>
-            <option value="siswa">Siswa</option>
-            {{-- <option value="guru">Guru</option> --}}
-            {{-- <option value="admin">Admin</option> --}}
-        </select>
-        <input type="password" name="password" placeholder="Password" required minlength="8">
-        <input type="password" name="password_confirmation" placeholder="Konfirmasi Password" required>
-        <button type="submit">Daftar</button>
     </form>
-
-
 </x-guest-layout>

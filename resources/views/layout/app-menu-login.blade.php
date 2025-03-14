@@ -32,8 +32,8 @@
         @include('layout.footer')
     </footer>
 
-    @vite('resources/js/main.js')
-    @vite('resources/js/navbar.js')
+    {{-- @vite('resources/js/main.js') --}}
+    {{-- @vite('resources/js/navbar.js') --}}
 </body>
 
 </html>
