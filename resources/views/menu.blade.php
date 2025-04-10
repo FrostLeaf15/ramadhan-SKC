@@ -23,14 +23,9 @@
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4 text-center">
-                <a href="/home"
+                <a href="/thankyou"
                     class="block w-full rounded-sm bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto">
-                    Login
-                </a>
-
-                <a href="/register"
-                    class="block w-full rounded-sm bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow-sm hover:text-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto">
-                    Register
+                    Masuk
                 </a>
             </div>
         </div>
