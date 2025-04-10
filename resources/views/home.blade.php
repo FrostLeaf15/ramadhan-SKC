@@ -40,7 +40,7 @@
                     </li>
 
                     <li>
-                        <a href="/home/ceramah" class="group block overflow-hidden">
+                        <a href="/home/maintenance" class="group block overflow-hidden">
                             <img src="{{ asset('img/asset/ceramah.png') }}" alt=""
                                 class="bg-white h-[350px] w-full object-cover border rounded-lg transition duration-500 group-hover:scale-105 group-hover:rounded sm:h-[450px]" />
                             <h2 class="text-center text-xl pt-2">Ceramah</h2>

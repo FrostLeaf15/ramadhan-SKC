@@ -29,7 +29,7 @@ class TerawehController extends Controller
         ]);
 
         Teraweh::create($request->all());
-        return response()->json(['message' => 'Data teraweh ditambahkan']);
+        return redirect()->back()->with('message', 'Data ditambahkan');
     }
 
     public function show(Teraweh $teraweh)

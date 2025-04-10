@@ -29,7 +29,7 @@ class NgajiController extends Controller
         ]);
 
         Ngaji::create($request->all());
-        return response()->json(['message' => 'Data ngaji ditambahkan']);
+        return redirect()->back()->with('message', 'Data ditambahkan');
     }
 
     public function show(Ngaji $ngaji)

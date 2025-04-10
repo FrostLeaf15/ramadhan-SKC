@@ -17,6 +17,8 @@ class StoreCeramahRequest extends FormRequest
             'nama_user' => 'required|string|max:255',
             'kelas_user' => 'required|string|max:255',
             'jurusan_user' => 'required|string|max:255',
+            'nama_penceramah' => 'required|string|max:255',
+            'lokasi_ceramah' => 'required|string|max:255',
             'tanggal_input' => 'required|date',
             'tipe_isi' => 'required|in:teks,gambar,dokumen',
             'isi_teks' => 'nullable|required_if:tipe_isi,teks|string|max:5000',

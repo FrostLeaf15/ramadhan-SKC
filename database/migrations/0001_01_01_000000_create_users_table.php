@@ -34,11 +34,12 @@ return new class extends Migration
             $table->integer('last_activity')->index();
         });
 
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('name'); // siswa, guru, admin
-            $table->timestamps();
-        });
+        // Schema::create('roles', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name'); // siswa, guru, admin
+        //     $table->string('guard_name'); // web, api
+        //     $table->timestamps();
+        // });
     }
 
     /**
@@ -49,6 +50,6 @@ return new class extends Migration
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
-        Schema::dropIfExists('roles');
+        // Schema::dropIfExists('roles');
     }
 };

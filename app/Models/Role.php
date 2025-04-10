@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models; // <- Pastikan namespace ini benar
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -9,7 +9,10 @@ class Role extends Model
 {
     use HasFactory;
 
-    protected $table = 'roles'; // Sesuaikan dengan nama tabel di database
+    protected $fillable = ['name'];
 
-    protected $fillable = ['name']; // Pastikan kolom ini ada di tabel roles
+    public function users()
+    {
+        return $this->hasMany(User::class, 'role_id');
+    }
 }

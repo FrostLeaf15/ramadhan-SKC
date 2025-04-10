@@ -3,15 +3,16 @@
 @section('title', 'Puasa')
 
 @section('content')
-    <div class="judul">
-        <h1 class="text-center text-3xl font-bold text-gray-900 uppercase py-2">Puasa</h1>
-    </div>
 
     <div class="isi container">
-        <div class="waktu text-center">
-            <div id="waktu"></div>
-        </div>
         <div class="form min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+            <div class="judul">
+                <h1 class="text-center text-3xl font-bold text-gray-900 uppercase py-2">Puasa</h1>
+            </div>
+            <div class="waktu text-center">
+                <div id="masehi-date"></div>
+                <div id="hijri-date"></div>
+            </div>
             <form action="{{ route('puasa.store') }}" method="POST">
                 @csrf
 
@@ -31,7 +32,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label>Tanggal Input</label>
+                    <label>Tanggal</label>
                     <input type="date" name="tanggal_input" class="form-control blocks w-full rounded-xl mt-1" required>
                 </div>
 

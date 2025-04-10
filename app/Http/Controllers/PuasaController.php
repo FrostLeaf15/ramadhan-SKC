@@ -32,7 +32,8 @@ class PuasaController extends Controller
         ]);
 
         Puasa::create($request->all());
-        return redirect()->route('puasa.index')->with('success', 'Data puasa ditambahkan');    }
+        return redirect()->back()->with('message', 'Data ditambahkan');
+    }
 
     public function show(Puasa $puasa)
     {

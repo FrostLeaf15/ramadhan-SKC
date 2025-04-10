@@ -43,17 +43,22 @@ class CeramahController extends Controller
                 break;
         }
 
+        // dd($data);
         // Simpan ke database
         Ceramah::create([
             'nama_user' => $data['nama_user'],
             'kelas_user' => $data['kelas_user'],
             'jurusan_user' => $data['jurusan_user'],
+            'nama_penceramah' => $data['nama_penceramah'],
+            'lokasi_ceramah' => $data['lokasi_ceramah'],
             'tanggal_input' => $data['tanggal_input'],
             'tipe_isi' => $data['tipe_isi'],
-            'isi' => $data['isi'] ?? null,
+            'isi_teks' => $data['isi_teks'] ?? null,
+            'isi_gambar' => $data['isi_gambar'] ?? null,
+            'isi_dokumen' => $data['isi_dokumen'] ?? null,
         ]);
 
-        return redirect()->route('ceramah.index')->with('success', 'Data ceramah berhasil ditambahkan!');
+        return redirect()->back()->with('message', 'Data ditambahkan');
     }
 
     public function show(Ceramah $ceramah)
